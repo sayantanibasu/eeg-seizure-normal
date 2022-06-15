@@ -77,7 +77,7 @@ opti = Adam(learning_rate=0.001)
 model.compile(loss='sparse_categorical_crossentropy', optimizer=opti, metrics=['accuracy'])
 
 # Train model on dataset
-model.fit_generator(generator=training_generator,validation_data=validation_generator,use_multiprocessing=True,workers=4,epochs=20,verbose=2)
+model.fit_generator(generator=training_generator,validation_data=validation_generator,use_multiprocessing=True,workers=4,epochs=45,verbose=2)
 #y_train=model.predict_generator(training_generator)
 #print(len(y_train))
 y_pred=model.predict_generator(validation_generator)
